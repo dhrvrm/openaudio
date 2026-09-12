@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>OpenAudio</string>
+<key>CFBundleIdentifier</key><string>com.dhrvrm.openaudio</string>
+<key>CFBundleIconFile</key><string>AppIcon</string>
+<key>CFBundleName</key><string>OpenAudio</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.5.3</string>
+<key>CFBundleVersion</key><string>8</string>
+<key>LSMinimumSystemVersion</key><string>15.0</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSAppleEventsUsageDescription</key><string>OpenAudio reads the current track and artwork from music apps you connect, and sends playback commands only when you use its controls.</string>
+<key>NSAudioCaptureUsageDescription</key><string>OpenAudio processes application audio locally to adjust volume, apply effects, and play it through your chosen speakers or headphones. Audio is never recorded or uploaded.</string>
+<key>CFBundleURLTypes</key><array><dict><key>CFBundleURLName</key><string>OpenAudio Automation</string><key>CFBundleURLSchemes</key><array><string>openaudio</string></array></dict></array>
+</dict></plist>

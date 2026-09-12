@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAudio Tabs",
+  "version": "0.5.0",
+  "minimum_chrome_version": "116",
+  "description": "Independent volume and output for tabs you activate in OpenAudio.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo6xHTHtJRdtpzpBjsmG2Dv6M3AZml02NXbUqc/d1xxEVT1jckHMJm4zb0rNXSEjSxMAniMprXcFIwVEBVLlaIj4prjr7RSHEczcjmIC5PotqBtCxuS81mbAEp0GYYYjuPjNOBQn+P4iKY8yNI39r2bEB/xD0yDJXNYlXgAMZ57ZTZuBHEBZHoZpLv5qcjhAk4dFKk5jPBYV6H9nwix4JETSXBU7BIWqs48UUKdXXeJstvHt8hWWIajYWQ6sfaJ3QzYwsSslMph4P5u/NzipZiObCaQXdVfkwttHEYXw41utEUvu+itgcua5zHXp3JdEVFIdU+PBc9hsZ8eTZ4guM2wIDAQAB",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "tabCapture",
+    "offscreen",
+    "nativeMessaging",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Control this tab in OpenAudio"
+  },
+  "options_page": "options.html",
+  "commands": {
+    "_execute_action": {
+      "description": "Control the current tab in OpenAudio"
+    }
+  },
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ]
+}

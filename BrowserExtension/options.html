@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><title>OpenAudio browser connection</title><link rel="stylesheet" href="popup.css"></head><body class="setup">
+<header><span class="mark">≋</span><strong>OpenAudio</strong></header><h1>Your tabs, in OpenAudio.</h1>
+<p>Click the OpenAudio toolbar button in a playing tab to give it independent audio controls. Click again to restore ordinary playback. The mixer lives in the OpenAudio app; no popup needs to stay open.</p>
+<p id="connection" role="status">Checking connection…</p>
+<a href="openaudio://enable">Open and enable OpenAudio</a>
+<h2>Output device access</h2>
+<p>To reveal additional speakers and headphones, Chromium requires microphone permission. This button requests access, immediately stops the temporary microphone stream, and refreshes the available outputs. No microphone audio is saved or sent.</p>
+<p>System default works without this additional permission.</p>
+<button id="enable">Allow device discovery</button><button id="refresh" class="secondary">Refresh devices</button><p id="status" role="status"></p>
+<h2>Vinyl track details</h2>
+<p>Allow metadata access to read song titles, artists and album covers from playing tabs across websites while the Vinyl window is open. This does not capture audio. Without this grant, only tabs you have approved through the toolbar can expose details. Some pages do not publish metadata.</p>
+<button id="metadata">Allow metadata across tabs</button><button id="revoke-metadata" class="secondary">Remove metadata access</button><p id="metadata-status" role="status"></p>
+<script src="options.js"></script></body></html>
