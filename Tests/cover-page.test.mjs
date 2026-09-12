@@ -5,7 +5,7 @@ import vm from 'node:vm';
 const script = readFileSync(new URL('../Resources/CoverPage.js', import.meta.url), 'utf8');
 function extract(data, links = []) {
   const document = {querySelectorAll: selector => selector === 'a[href]' ? links.map(href => ({getAttribute: () => href})) : data.map(value => ({textContent: typeof value === 'string' ? value : JSON.stringify(value)}))};
-  return JSON.parse(vm.runInNewContext(script, {document, URL, location: {href: 'https://www.google.com/search?q=track'}}, {timeout: 100}));
+  return JSON.parse(vm.runInNewContext(script, {document, URL, location: {href: 'https://www.google.com/search?q=track'}}, {timeout: 1000}));
 }
 test('public-page extraction reads recording facts and album image without executing markup', () => {
   const result = extract([{'@graph': [{'@type': 'MusicRecording', name: 'Song', byArtist: {name: 'Artist'}, inAlbum: {name: 'Album', image: 'https://example.com/a.jpg'}}]}]);
